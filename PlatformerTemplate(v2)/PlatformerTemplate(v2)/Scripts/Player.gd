@@ -155,7 +155,7 @@ func set_state(new_state : String):
 #Functions used across multiple states
 
 func move_horizontally(subtractor):
-	currentSpeed = move_toward(currentSpeed, maxSpeed, acceleration) #accelerate current speed
+	currentSpeed = move_toward(currentSpeed, maxSpeed - airFriction, acceleration) #accelerate current speed
 	
 	velocity.x = currentSpeed * movementInput #apply curent speed to velocity and multiply by direction
 
